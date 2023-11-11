@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- !fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.css"
+    />
+
+    <!-- Link Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <title>Car Sale</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- !NAV -->
+    <nav class="nav">
+      <div class="navbar">
+        <div id="MenuBtn" class="fas fa-bars"></div>
+
+        <div class="navbar__logo">
+          <a href="./index.html" class="logo">V<span>SALE</span></a>
+        </div>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="./index.html#bestSellers">Топовые</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./index.html#userAdvertisement"
+              >Объявления</a
+            >
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./index.html#services">Услуги</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./index.html#review">Отзывы</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./index.html#footer">Контакты</a>
+          </li>
+        </ul>
+
+        <div class="nav__btns">
+          <div class="search">
+            <a href="./searchPost.html" class="search-link">
+              <i class="fas fa-search"></i>
+            </a>
+          </div>
+
+          <div id="login-btn">
+            <button class="login-btn">Вход</button>
+          </div>
+          <div id="account-link">
+            <a class="account" href="./userAccount.html">
+              <i class="fa-solid fa-user"></i>
+              Кабинет</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- !NAV END -->
+
+    <main class="main">
+      <section class="postAds">
+        <div class="container">
+          <h2 class="section__title">Подача объявления</h2>
+          <div class="postAds__content">
+            <form id="postForm" class="postForm">
+              <!-- !CAR IMAGES UPLOAD HERE -->
+              <div class="uploadImg__content">
+                <div class="uploadImg__content-header">
+                  <label for="">
+                    <span> Загрузите картинку </span>
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                  </label>
+                  <input
+                    id="uploadImg"
+                    type="file"
+                    class="uploadImg"
+                    multiple
+                  />
+                </div>
+
+                <div class="uploadImg__content-body"></div>
+              </div>
+
+              <!-- !CAR SETTINGS HERE -->
+              <div class="carDescription__content">
+                <div class="postForm__row">
+                  <div class="postForm__field">
+                    <input
+                      id="carBrand"
+                      pattern="[a-zA-Zа-яА-Я0-9]{0,}"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Марка"
+                      required
+                    />
+                  </div>
+                  <div class="postForm__field">
+                    <input
+                      id="carName"
+                      pattern="[a-zA-Zа-яА-Я0-9]{0,}"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Модель"
+                      required
+                    />
+                  </div>
+                  <div class="postForm__select">
+                    <div class="selectField" id="select-kpp">
+                      <p class="selectField__kpp">КПП</p>
+                      <i class="fa-solid fa-angle-down"></i>
+                    </div>
+
+                    <ul id="postForm__list">
+                      <li class="options" data-target="select-kpp">Автомат</li>
+                      <li class="options" data-target="select-kpp">Механика</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="postForm__row">
+                  <div class="postForm__select">
+                    <div class="selectField" id="select-fuel">
+                      <p class="selectField__fuel">Топливо</p>
+                      <i class="fa-solid fa-angle-down"></i>
+                    </div>
+
+                    <ul id="postForm__list">
+                      <li class="options" data-target="select-fuel">Бензин</li>
+                      <li class="options" data-target="select-fuel">Дизель</li>
+                      <li class="options" data-target="select-fuel">Электро</li>
+                      <li class="options" data-target="select-fuel">Гибрид</li>
+                      <li class="options" data-target="select-fuel">ГБО</li>
+                    </ul>
+                  </div>
+                  <div class="postForm__field">
+                    <input
+                      id="carEnginesize"
+                      title="только числа"
+                      pattern="[0-9.0-9]{1,3}"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Объем двигателя, Л"
+                      required
+                    />
+                  </div>
+                  <div class="postForm__select">
+                    <div class="selectField" id="select-drive">
+                      <p class="selectField__drive">Привод</p>
+                      <i class="fa-solid fa-angle-down"></i>
+                    </div>
+
+                    <ul id="postForm__list">
+                      <li class="options" data-target="select-drive">4WD</li>
+                      <li class="options" data-target="select-drive">
+                        Передний
+                      </li>
+                      <li class="options" data-target="select-drive">Задний</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="postForm__row">
+                  <div class="postForm__field">
+                    <input
+                      id="carBodytype"
+                      title="только буквы"
+                      pattern="[a-zA-Zа-яА-Я0-9]{0,}"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Тип кузова"
+                      required
+                    />
+                  </div>
+                  <div class="postForm__field">
+                    <input
+                      id="carColor"
+                      title="только буквы"
+                      pattern="[a-zA-Zа-яА-Я0-9]{0,}"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Цвет вашей машины"
+                      required
+                    />
+                  </div>
+                  <div class="postForm__field">
+                    <input
+                      id="carPower"
+                      title="только числа"
+                      pattern="[0-9]{0,3}"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Мощность по ПТС"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="postForm__row">
+                  <div class="postForm__field">
+                    <input
+                      id="carMileage"
+                      title="только числа"
+                      pattern="[0-9]{0,}"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Пробег"
+                      required
+                    />
+                  </div>
+                  <div class="postForm__field">
+                    <input
+                      id="carYear"
+                      title="только числа"
+                      pattern="[0-9]{0,}"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Год выпуска"
+                      required
+                    />
+                  </div>
+                  <div class="postForm__field">
+                    <input
+                      id="carPrice"
+                      title="только числа"
+                      pattern="[0-9]{0,}"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="цена машины в $"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="postForm__row">
+                  <div class="postForm__field">
+                    <input
+                      id="userName"
+                      title="только буквы"
+                      pattern="[a-zA-Zа-яА-Я0-9]{0,}"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Ваша имя"
+                      required
+                    />
+                  </div>
+                  <div class="postForm__field">
+                    <input
+                      id="userPhone"
+                      title="только числа"
+                      pattern="[0-9]{0,}"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Ваш Номер: 941231232"
+                      required
+                    />
+                  </div>
+                  <div class="postForm__select">
+                    <div class="selectField" id="select-city">
+                      <p class="selectField__city">Город</p>
+                      <i class="fa-solid fa-angle-down"></i>
+                    </div>
+
+                    <ul id="postForm__list">
+                      <li class="options" data-target="select-city">Ташкент</li>
+                      <li class="options" data-target="select-city">
+                        Самарканд
+                      </li>
+                      <li class="options" data-target="select-city">Бухара</li>
+                      <li class="options" data-target="select-city">Хива</li>
+                      <li class="options" data-target="select-city">
+                        Шахрисабз
+                      </li>
+                      <li class="options" data-target="select-city">Термез</li>
+                      <li class="options" data-target="select-city">Нукус</li>
+                      <li class="options" data-target="select-city">
+                        Наманган
+                      </li>
+                      <li class="options" data-target="select-city">Карши</li>
+                      <li class="options" data-target="select-city">Навои</li>
+                      <li class="options" data-target="select-city">Коканд</li>
+                      <li class="options" data-target="select-city">Андижан</li>
+                      <li class="options" data-target="select-city">Фергана</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="postForm__row">
+                  <div class="postForm__description">
+                    <textarea
+                      id="carDescription"
+                      cols="30"
+                      rows="10"
+                      placeholder="Описания"
+                      required
+                      autocomplete="off"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <button id="getPostformData">Опубликовать</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Login Form Container/Popup -->
+    <div class="loginFormContainer">
+      <span id="CloseLoginForm" class="fas fa-times"></span>
+
+      <form class="login-form" onsubmit="signIn(event)">
+        <h3 class="form-title">Войти в Мой профиль</h3>
+        <input
+          pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9._+-]+\.[a-z]{2,}"
+          type="email"
+          placeholder="Email"
+          required
+          id="loginEmail"
+          class="box"
+        />
+        <input
+          title="не меньше 6 символов"
+          pattern="[a-zA-Z0-9]{6,}"
+          type="password"
+          placeholder="Password"
+          required
+          id="loginPassword"
+          class="box"
+        />
+        <p class="form__text">
+          <a class="form__link" href="./signupForm.html">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+        </p>
+        <p class="form__text">
+          <a class="form__link" href="#">Забыли пароль?</a>
+        </p>
+        <button class="login-btn btn">Войти</button>
+        <p class="form__info">
+          Входя в раздел Мой профиль, вы принимаете Условия использования сайта
+        </p>
+        <!-- <p>войти через аккаунт</p>
+					 <div class="buttons">
+						  <a href="#" class="btn">Google</a>
+						  <a href="#" class="btn">Facebook</a>
+					 </div> -->
+      </form>
+    </div>
+    <!-- Login Form Container/Popup -->
+    <!-- !pop up -->
+    <div class="popup"></div>
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js"></script>
+    <!-- Script For POSTS -->
+    <script type="module" src="./js/postForms.js"></script>
+    <!-- Script For JS -->
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

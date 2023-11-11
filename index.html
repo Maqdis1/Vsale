@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- !fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.css"
+    />
+
+    <!-- Link Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <title>Car Sale</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- !NAV -->
+    <nav class="nav">
+      <div class="navbar">
+        <div id="MenuBtn" class="fas fa-bars"></div>
+
+        <div class="navbar__logo">
+          <a href="#!" class="logo">V<span>SALE</span></a>
+        </div>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#bestSellers">Топовые</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#userAdvertisement">Объявления</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#services">Услуги</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#reviews">Отзывы</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#footer">Контакты</a>
+          </li>
+        </ul>
+
+        <div class="nav__btns">
+          <div id="add-button">
+            <a class="add-button" href="./postAds.html">
+              <i class="fas fa-plus-circle"></i>
+              Подать объявление
+            </a>
+          </div>
+          <div class="search">
+            <a href="./searchPost.html" class="search-link">
+              <i class="fas fa-search"></i>
+            </a>
+          </div>
+
+          <div id="login-btn">
+            <button class="login-btn">Вход</button>
+          </div>
+          <div id="account-link">
+            <a class="account" href="./userAccount.html">
+              <i class="fa-solid fa-user"></i>
+              Кабинет</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- !NAV END -->
+
+    <!-- !HEADER -->
+    <header id="header" class="header">
+      <div class="container">
+        <div class="header__content">
+          <div class="header__info">
+            <h3 class="header__title">
+              V
+              <span>SALE</span>
+            </h3>
+            <p class="header__text">
+              Широкие возможности <br />купли и продажи
+              <span> легковых автомобилей</span>
+            </p>
+          </div>
+          <div class="header__img">
+            <img src="./images/headerImg/logo.gif" alt="header image" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- !HEADER END -->
+    <!-- !ICONS -->
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about__content">
+          <!-- <article class="about__card">
+            <i class="fas fa-gear"></i>
+            <div class="about__card-info">
+              <h3 class="card-info__title">451000+</h3>
+              <p class="card-info__subtitle">Продано запчастей</p>
+            </div>
+          </article> -->
+        </div>
+      </div>
+    </section>
+    <!-- !ICONS END -->
+    <!-- !BEST SELLERS -->
+    <section id="bestSellers" class="bestSellers">
+      <h2 class="section__title">Топовые</h2>
+      <div class="container">
+        <div class="swiper bestSellers__content">
+          <div class="bestSellers__sliders swiper-wrapper">
+            <!-- <article class="swiper-slide bestSellers__content-item">
+              <img src="./images/carSlider/car1.jpg" alt="" />
+              <div class="bestSellers__content-info">
+                <h3 class="content-info__title">Chevrolet Malibu 2</h3>
+                <div class="content-info__price">Цена: $ 42 000</div>
+                <p>
+                  <span class="fas fa-circle"></span>2022
+                  <span class="fas fa-circle"></span>Автомат
+                  <span class="fas fa-circle"></span>Бензин
+                  <span class="fas fa-circle"></span>10 000 км
+                </p>
+              </div>
+            </article> -->
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- !BEST SELLERS END -->
+    <!-- !USER ADVERTISEMENT -->
+    <section id="userAdvertisement" class="userAdvertisement">
+      <h2 class="section__title">Объявления</h2>
+      <div class="container">
+        <div class="userAdvertisement__content">
+          <!-- <article class="userAdvertisement__item">
+            <div class="userAdvertisement__item-img">
+              <img src="./images/userAdd/advert1.jpg" alt="" />
+            </div>
+
+            <div class="userAdvertisement__item-content">
+              <h2 class="userAdvertisement__item-title">Cadillac Escalade</h2>
+              <div class="userAdvertisement__item-info">
+                <div class="userAdvertisement__item-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+
+                <p>2022 года выпуска</p>
+              </div>
+              <div class="userAdvertisement__item-info">
+                <div class="userAdvertisement__item-icon">
+                  <i class="fas fa-gas-pump"></i>
+                </div>
+
+                <p>Бензиновый двигатель</p>
+              </div>
+              <div class="userAdvertisement__item-info">
+                <div class="userAdvertisement__item-icon">
+                  <i class="fas fa-road"></i>
+                </div>
+
+                <p>10 000 км пробега</p>
+              </div>
+              <div class="userAdvertisement__item-info">
+                <div class="userAdvertisement__item-icon">
+                  <i class="fas fa-dollar-sign"></i>
+                </div>
+
+                <p>Цена: $ 49 000</p>
+              </div>
+            </div>
+            <div onclick="" class="like__controller">
+              <i id="addToFavourites" class="fa-solid fa-heart"></i>
+
+              <a class="moreInfo" href="#!">подробно</a>
+            </div>
+          </article> -->
+        </div>
+      </div>
+
+      <div class="showMore">
+        <a href="#!" class="showMore-btn">
+          показать еще
+          <img class="loading-gif" src="./images/headerImg/loading.gif" alt="">
+        </a>
+      </div>
+    </section>
+    <!-- !USER ADVERTISEMENT END -->
+    <!-- !BRANDS -->
+    <section id="brand" class="brand">
+      <h2 class="section__title">
+        Поиск по марке автомобиля
+      </h2>
+      <div class="container">
+        <div class="brand__content">
+          <ul class="brands__list">
+            <li class="active">Все</li>
+            <li>BMW</li>
+            <li>Mercedes</li>
+            <li>Chevrolet</li>
+            <li>Daewoo</li>
+            <li>Toyota</li>
+            <li>Honda</li>
+            <li>KIA</li>
+            <li>Hyundai</li>
+            <li>Nissan</li>
+            <li>Volvo</li>
+            <li>Ford</li>
+
+            <!-- <li>Lada</li> -->
+            <!-- <li>Audi</li> -->
+            <!-- <li>Tesla</li> -->
+            <!-- <li>Lexus</li> -->
+            <!-- <li>Acura</li> -->
+            <!-- <li>Porsche</li> -->
+            <!-- <li>Jaguar</li> -->
+          </ul>
+          <div class="product">
+            <img src="./images/brandFilter/bmw.jpg" data-filter="bmw" />
+            <img src="./images/brandFilter//bmw2.jpg" data-filter="bmw" />
+            <img src="./images/brandFilter//bmw3.jpg" data-filter="bmw" />
+            <img src="./images/brandFilter//ford.jpg" data-filter="ford" />
+            <img src="./images/brandFilter//ford2.jpeg" data-filter="ford" />
+            <img src="./images/brandFilter//ford3.jpg" data-filter="ford" />
+            <img src="./images/brandFilter//merc.jpg" data-filter="mercedes" />
+            <img src="./images/brandFilter//merc2.jpg" data-filter="mercedes" />
+            <img src="./images/brandFilter//merc3.jpg" data-filter="mercedes" />
+            <img src="./images/brandFilter//volvo.jpeg" data-filter="volvo" />
+            <img src="./images/brandFilter//chevrolet.webp" data-filter="chevrolet" />
+            <img src="./images/brandFilter//chevrolet2.jpg" data-filter="chevrolet" />
+            <img src="./images/brandFilter//chevrolet3.jpeg" data-filter="chevrolet" />
+            <img src="./images/brandFilter//daewoo.webp" data-filter="daewoo" />
+            <img src="./images/brandFilter//daewoo2.jpg" data-filter="daewoo" />
+            <img src="./images/brandFilter//daewoo3.webp" data-filter="daewoo" />
+            <img src="./images/brandFilter//toyota.jpg" data-filter="toyota" />
+            <img src="./images/brandFilter//toyota2.jpg" data-filter="toyota" />
+            <img src="./images/brandFilter//toyota3.webp" data-filter="toyota" />
+            <img src="./images/brandFilter//honda.jpg" data-filter="honda" />
+            <img src="./images/brandFilter//kia.webp" data-filter="kia" />
+            <img src="./images/brandFilter//hyundai.webp" data-filter="hyundai" />
+            <img src="./images/brandFilter//nissan.jpg" data-filter="nissan" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- !BRANDS END -->
+    <!-- !SERVICES -->
+    <section id="services" class="services">
+      <h2 class="section__title">Услуги</h2>
+      <div class="container">
+        <div class="services__content">
+          <!-- <article class="services__item">
+            <a class="services__item-link" href="#!">
+              <i class="services__item-icon fas fa-tools"></i>
+              <h3 class="services__item-title">Ремонт</h3>
+              <p class="services__item-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Delectus facilis sapiente suscipit explicabo natus ducimus?
+              </p>
+
+              <p class="moreInfo">
+                подробно
+                <i class="fa-solid fa-arrow-right"></i>
+              </p>
+            </a>
+          </article> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- !SERVICES END -->
+    <!-- !USERS REVIEW -->
+    <section id="reviews" class="reviews">
+      <h2 class="section__title">Отзывы наших пользователей</h2>
+      <!-- !ORIGINAL SITE -->
+      <div class="container">
+        <div class="swiper reviews__content">
+          <div class="reviews__sliders swiper-wrapper">
+            <!-- <article class="reviews__item swiper-slide">
+              <div class="reviews__item-img">
+                <img src="./images/usersReviews/user1.png" alt="" />
+              </div>
+
+              <div class="reviews__item-content">
+                <p class="reviews__item-userReview">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Mollitia exercitationem ratione voluptates aspernatur, eum
+                  sed.
+                </p>
+                <h3 class="reviews__item-userName">
+                  Анатолий Коваленко
+                </h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </article> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- !USERS REVIEW END -->
+    <!-- !FOOTER -->
+    <footer class="footer" id="footer">
+      <div class="footer__inner">
+        <div class="container">
+          <div class="footer__content">
+            <div class="footer__logo">
+              <a href="#!" class="logo">V<span>SALE</span></a>
+              <p>
+                Широкие возможности купли <br />и продажи легковых автомобилей
+              </p>
+            </div>
+            <div class="footer__menu">
+              <h3 class="footer__title">Навигация</h3>
+              <ul class="footer__menu-list">
+                <li><a href="#header">Главная</a></li>
+                <li><a href="#bestSellers">Топовые</a></li>
+                <li><a href="#userAdvertisement">Объявления</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+              </ul>
+            </div>
+            <div class="footer__social">
+              <h3 class="footer__title">Социальные сети</h3>
+              <div class="footer__social-content">
+                <a href="#!">
+                  <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="#!">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#!">
+                  <i class="fa-brands fa-vk"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- !FOOTER END -->
+
+    <!-- ?Login Form Container/Popup -->
+    <div class="loginFormContainer">
+      <span id="CloseLoginForm" class="fas fa-times"></span>
+
+      <form class="login-form" onsubmit="signIn(event)">
+        <h3 class="form-title">Войти в Мой профиль</h3>
+        <input
+          pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9._+-]+\.[a-z]{2,}"
+          type="email"
+          placeholder="Email"
+          required
+          id="loginEmail"
+          class="box"
+        />
+        <input
+          title="не меньше 6 символов"
+          pattern="[a-zA-Z0-9]{6,}"
+          type="password"
+          placeholder="Password"
+          required
+          id="loginPassword"
+          class="box"
+        />
+        <p class="form__text">
+          <a class="form__link" href="./signupForm.html">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+        </p>
+        <p class="form__text">
+          <a class="form__link" href="#">Забыли пароль?</a>
+        </p>
+        <button class="login-btn btn">Войти</button>
+        <p class="form__info">
+          Входя в раздел Мой профиль, вы принимаете Условия использования сайта
+        </p>
+      </form>
+    </div>
+    <!-- ?Login Form Container/Popup -->
+
+    <!-- !pop up -->
+    <div class="popup"></div>
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js"></script>
+    <!-- Script For JS -->
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

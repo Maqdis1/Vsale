@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- !fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.css"
+    />
+
+    <!-- Link Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <title>Car Sale</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- !NAV -->
+    <nav class="nav">
+      <div class="navbar">
+        <div id="MenuBtn" class="fas fa-bars"></div>
+
+        <div class="navbar__logo">
+          <a href="./index.html" class="logo">V<span>SALE</span></a>
+        </div>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="./index.html#bestSellers">Топовые</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./index.html#userAdvertisement"
+              >Объявления</a
+            >
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./index.html#services">Услуги</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./index.html#review">Отзывы</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./index.html#footer">Контакты</a>
+          </li>
+        </ul>
+
+        <div class="nav__btns">
+          <div id="add-button">
+            <a class="add-button" href="./postAds.html">
+              <i class="fas fa-plus-circle"></i>
+              Подать объявление
+            </a>
+          </div>
+          <div class="search">
+            <a href="./searchPost.html" class="search-link">
+              <i class="fas fa-search"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- !NAV END -->
+    <!-- !MAIN -->
+    <main class="mainTab">
+      <div class="container">
+        <div class="mainTab__content">
+          <div class="mainTab__content-left">
+            <ul class="tab__list">
+              <li class="tab__list-item active">
+                <i class="fa-solid fa-user"></i>
+                <p>Ваши Данные</p>
+              </li>
+              <li class="tab__list-item">
+                <i class="fa-solid fa-heart"></i>
+                <p>Избранные</p>
+              </li>
+              <li class="tab__list-item">
+                <i class="fa-solid fa-sack-dollar"></i>
+                <p>Ваши Объявлении</p>
+              </li>
+            </ul>
+            <button class="btn-logOff redBtn">
+              <i class="fa-solid fa-bed"></i>
+              <span>Выйти</span>
+            </button>
+          </div>
+          <div class="mainTab__content-right">
+            <div class="content-right__info show">
+              <h2 class="section__title">Ваши данные</h2>
+
+              <div class="user__info"></div>
+            </div>
+            <div class="content-right__info">
+              <h2 class="section__title">Ваши избранные</h2>
+
+              <div class="favorite__ads"></div>
+            </div>
+            <div class="content-right__info">
+              <h2 class="section__title">Ваши Объявлении</h2>
+
+              <div class="userNew__Posts"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- !MAIN END -->
+    <div class="popup"></div>
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js"></script>
+    <!-- Script For JS -->
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
